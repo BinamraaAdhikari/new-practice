@@ -1,0 +1,12 @@
+a=[]
+b=int(input("Enter a number:"))  
+a.append(b)  
+b1=int(input("Enter a number:"))  
+a.append(b1)  
+b2=int(input("Enter a number:"))  
+a.append(b2)  
+b3=int(input("Enter a number:"))  
+a.append(b3)  
+b4=int(input("Enter a number:"))  
+a.append(b4)
+print(sum(a))   
