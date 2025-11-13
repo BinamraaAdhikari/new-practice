@@ -1,0 +1,17 @@
+a=[]
+b=input("Enter your favorite fruits:") 
+a.append(b)
+b=input("Enter your favorite fruits:") 
+a.append(b)      
+b=input("Enter your favorite fruits:") 
+a.append(b)      
+b=input("Enter your favorite fruits:") 
+a.append(b)      
+b=input("Enter your favorite fruits:") 
+a.append(b)      
+b=input("Enter your favorite fruits:") 
+a.append(b)      
+b=input("Enter your favorite fruits:") 
+a.append(b)      
+print(a)                                         
+                 
