@@ -1,0 +1,7 @@
+a=("make a lot of money","buy now","click here","subscribe to")
+b=input("Share your thoughts:").lower()
+if any (phrase in b for phrase in a):
+    print("The comment is a spam:")
+else:
+    print("Commented")
+                           
