@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Order</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        text-align: center;
+        width: 300px;
+    }
+    input[type="text"] {
+        padding: 10px;
+        width: 80%;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    button {
+        padding: 10px 20px;
+        border: none;
+        background-color: #28a745;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #218838;
+    }
+    p {
+        margin-top: 15px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Food Order</h2>
+    <input type="text" id="food" placeholder="Enter the food you want to order">
+    <br>
+    <button onclick="checkOrder()">Order</button>
+    <p id="message"></p>
+</div>
+
+<script>
+const fruits = ["apple", "banana", "mango", "orange"];
+const vegetables = ["carrot", "broccoli", "spinach"];
+const fast_food = ["burger", "pizza", "fries"];
+
+function checkOrder() {
+    let food = document.getElementById("food").value.toLowerCase();
+    let message = document.getElementById("message");
+
+    if (fruits.includes(food)) {
+        if (confirm("The fruit you want to order is " + food + ". Confirm your order?")) {
+            message.textContent = "Order confirmed";
+        } else {
+            message.textContent = "Order canceled";
+        }
+    } else if (vegetables.includes(food)) {
+        if (confirm("The vegetable you want to order is " + food + ". Confirm your order?")) {
+            message.textContent = "Order confirmed";
+        } else {
+            message.textContent = "Order canceled";
+        }
+    } else if (fast_food.includes(food)) {
+        if (confirm("The fast food you want to order is " + food + ". Confirm your order?")) {
+            message.textContent = "Order confirmed";
+        } else {
+            message.textContent = "Order canceled";
+        }
+    } else {
+        message.textContent = "The item you ordered is unavailable";
+    }
+}
+</script>
+
+</body>
+</html>
